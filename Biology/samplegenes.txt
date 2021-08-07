@@ -1,0 +1,5 @@
+[
+        {"name":"Canis familiaris", "DNA":"ACGTGCGAGACTCGCAAGG"},
+        {"name":"Canis Lupus", "DNA":"TATGCGATTACTCGTTAAGG"},
+        {"name":"Felis Catus", "DNA":"GGGTTTTGCGAACGGACTT"}
+    ]

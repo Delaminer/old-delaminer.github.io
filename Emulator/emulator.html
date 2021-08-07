@@ -1,0 +1,52 @@
+
+<html><!--<style> html, body {background-color: yellow} </style>-->
+<head><link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16">
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../green_theme.css">
+</head>
+<body>
+    <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script>
+    <div style="height: 50px;" class="jumbo text-center" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Chip8 Emulator <a target="_blank" href="https://en.wikipedia.org/wiki/CHIP-8"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></h1></div>
+    <!-- <div class="jumbotron text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Tic Tac Toe</h1></div></a> -->
+    <div style="padding-left: 30px;">
+    <!-- <canvas id="myCanvas" width="650" height="440"
+    style="border:1px solid #000000;">The canvas doesn't work in your browser!</canvas> -->
+    <p id="status"></p>
+    <div id="options">
+        <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Load Game <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="loadGamesButton">
+                <!-- <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li> -->
+            </ul>
+        </div>
+        <button class="btn btn-success" id="play/pause">Pause Game</button>
+        <button class="btn btn-success" id="fullscreen">Go fullscreen</button>
+        <button class="btn btn-success" id="reboot">Reboot Game</button>
+        <!-- <button class="btn btn-success">Background Color: <input type="color" id="back-color" value="#606060"></button>
+        <button class="btn btn-success">Foreground Color: <input type="color" id="fore-color" value="#D6ED17"></button> -->
+        <button class="btn btn-success">Background Color: <input type="color" id="back-color" value="#00203F"></button>
+        <button class="btn btn-success">Foreground Color: <input type="color" id="fore-color" value="#ADEFD1"></button>
+        <label for="windowSize">Game Window Size: &nbsp;</label><input type="number" id="windowSize" min="1" value="20"> <!--<button id="windowSizeButton">Change</button>-->
+        <button class="btn btn-success" id="save-state">Save state</button>
+        <button class="btn btn-success" id="upload-state">Upload state</button>
+        <input type="file" id="upload-state-file" style="display:none"> <!-- Hidden, is clicked automatically when the upload button is clicked -->
+    </div>
+    <br>
+    <canvas id="emulator" width="640px" height="320px" style="border: 1px solid black;">uh oh</canvas>
+    <br>
+    <div id="boxes"></div>
+    
+    <script src="emulator.js"></script></div>
+</body>
+</html>

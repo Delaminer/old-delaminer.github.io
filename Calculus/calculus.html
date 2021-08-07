@@ -1,0 +1,149 @@
+<html><!--<style> html, body {background-color: yellow} </style>-->
+<head><link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16">
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script src="https://peterolson.github.io/BigInteger.js/BigInteger.min.js"></script>
+    <!-- <script src="algebrite.bundle-for-browser.js" charset="utf-8"></script> -->
+    <link rel="stylesheet" href="../green_theme.css">
+    <style>
+        span {
+            width: 100%;
+            display: block;
+        }
+        table, th, td {
+            margin: 0px;
+            /* border-color: black;
+            border-width: 1px; */
+            border: black 1px solid;
+            min-width: 30px;
+            min-height: 100px;
+            text-align: center;
+        }
+        .missing {
+            display: inline;
+            color: red;
+            font-weight: bolder;
+        }
+        .answer-cas {
+            background-color: white;
+            min-width: 25%;
+            max-width: 55%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid rgb(29, 56, 29);
+            border-radius: 5px;
+            font-size: large;
+            font-weight: 500;     
+        }
+    </style>
+</head>
+<body style="overflow-x: hidden">
+    <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script>
+    <div style="height: 50px;" class="jumbo text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Calculus Tools</h1></div>
+    <p class="subtitle">Here you can use my custom derivative solver, a Computer Algebra System, or an eigenvalue and eigenvector solver (for systems of differential equations)!</p>
+    <!-- <script src="test.js"></script> -->
+    <!-- <h1 style="padding: 100px;">\(C(a)l\mathbb Cu\int us + T(o, o)ls\)</h1> -->
+    <div class="things">
+        <ul class="nav nav-tabs" style="padding-left: 40px;">
+          <li class="active"><a data-toggle="tab" href="#eqsolver">Derivative Solver</a></li>
+          <li><a data-toggle="tab" href="#cas">CAS</a></li>
+          <li><a data-toggle="tab" href="#matrices">Eigenvalues and Eigenvectors</a></li>
+        </ul>
+        
+        <div class="tab-content" style="padding-left: 40px;">
+            
+        <div id="eqsolver" class="tab-pane fade in active">
+            <strong>Note: This derivative solver was made by me, and may have unexpected bugs. Use at your own risk!</strong>
+            <br><br>
+            <label for="in-eq">Your Function: &nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="in-eq" autofocus>
+            <button class="btn btn-default" id="in-eq-btn">Solve</button>
+            <p id="yousaid"></p>
+            <p id="derivative"></p>
+            <!-- Wait what?
+            When \(someone sa{ys 3*}\) or \( a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ -->
+            <!-- <script src="derivatives.js"></script> -->
+        </div>
+        <div id="cas" class="tab-pane fade in">
+            <p>CAS provided by <a href="http://algebrite.org/" target="_blank">Algebrite.</a> Thank you!</p>
+            <br><br>
+            <label for="in-cas">Your Function/Algebrite code: &nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="in-cas" autofocus>
+            <br>
+            <button class="btn btn-default" id="in-cas-solve">Run Algebrite Code</button>
+            <button class="btn btn-default" id="in-cas-derive">Find Derivative of Function</button>
+            <button class="btn btn-default" id="in-cas-integral">Find Indefinite Integral of Function</button>
+            <div class="btn btn-default">
+                Find Definite Integral from 
+                <input type="text" id="in-cas-defintegral-lower"> to <input type="text" id="in-cas-defintegral-upper"> 
+                <button class="btn btn-default" id="in-cas-defintegral">Solve</button>
+            </div>
+            <p id="yousaid-cas"></p>
+            <p id="answer-cas"></p>
+            <p id="rewritten-answer-cas"></p>
+            <div class="answer-cas" id="dual-answer-cas">Answer will go here...</div>
+            <!-- Wait what?
+            When \(someone sa{ys 3*}\) or \( a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ -->
+            <!-- <script src="derivatives.js"></script> -->
+        </div>
+        <div id="matrices" class="tab-pane fade in">
+            <h5>Note: click on the cells in the matrix to edit them.</h5>
+            <h5>Also note: The 3x3 matrix solver is still a WIP.</h5>
+            <br>
+            <br>
+        <br>
+        <p style="font-weight: bold;">x'(t) = A * x(t)<br>A = </p>
+        <table style="font-weight: bold;">
+        <tbody id="matrix table">
+                <tr>
+                    <td><span id="A1" contenteditable></span></td>
+                    <td><span id="B1" contenteditable></span></td>
+                    <td><span id="C1" contenteditable></span></td>
+                </tr>
+                <tr>
+                    <td><span id="A2" contenteditable></span></td>
+                    <td><span id="B2" contenteditable></span></td>
+                    <td><span id="C2" contenteditable></span></td>
+                </tr>
+                <tr>
+                    <td><span id="A3" contenteditable></span></td>
+                    <td><span id="B3" contenteditable></span></td>
+                    <td><span id="C3" contenteditable></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button onclick="Use2()">2x2</button>
+        <button onclick="Use3()">3x3</button>
+        <button onclick="solveMatrix()">Solve!</button>
+        <br>
+        <br>
+        <p id="eigenvalues">
+            Eigenvalues are _ and _
+        </p>
+        <p id="eigenvectors">
+            Eigenvectors are _ and _
+        </p>
+        <p id="eigenvalue-solution">
+            x(t) = 
+        </p>
+        <script src="matrices.js"></script>
+        </div>
+        </div>
+    </div>
+    <!-- <script src="textToDerivative.js"></script> -->
+    <script src="bundle.js"></script>
+</body>
+</html>

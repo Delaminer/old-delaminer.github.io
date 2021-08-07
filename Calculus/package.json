@@ -1,0 +1,19 @@
+{
+  "name": "calculus",
+  "version": "0.1.0",
+  "description": "",
+  "main": "textToDerivative.js",
+  "scripts": {
+    "build": "browserify textToDerivative.js -o bundle.js",
+    "watch": "watchify textToDerivative.js -o bundle.js"
+  },
+  "author": "Alex de la Iglesia",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.5.2",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "big-integer": "^1.6.48"
+  }
+}

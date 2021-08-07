@@ -1,0 +1,44 @@
+<html>
+<head><link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16">
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../green_theme.css">
+    <style></style>
+</head>
+<body>
+    <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script>
+    <div style="height: 50px;" class="jumbo text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">DNA Phylogeny</h1></div>
+    <div style="margin-left: 100px;">
+    <p>
+        Create phylogenetic trees using DNA! Either paste/upload your own JSON-formatted DNA sequences or create random trees! 
+        (Note: The algorithm used to compare genetic differences is not perfect, so pyhlogenetic trees might not be 100% correct)
+    </p>
+    <button class="btn btn-default" id="random-tree-button">Generate Random Tree</button>
+    <button class="btn btn-default" id="read-dna-button">Use Sample JSON</button>
+    <button class="btn btn-default" id="read-dna-text">Paste JSON text</button>
+    <br>
+    <label for="submit-dna-file">Upload JSON/text file:</label><input type="file" id="submit-dna-file">
+    <br>
+    <canvas id="phylogeny tree" width="650" height="440"
+    style="border:1px solid #000000;">The canvas doesn't work in your browser!</canvas>
+    <h3>Submitting DNA</h5>
+    <p>
+        Files can be any type, but the text inside must be written in JSON format creating an array with each species as an object inside it. 
+        Each species object has a name attritube with the name of the species and a DNA attribute with the genetic code.
+    </p>
+    <h5>Example:</h5>
+    <pre>
+    [
+        {"name":"Canis familiaris", "DNA":"ACGTGCGAGACTCGCAAGG"},
+        {"name":"Canis Lupus", "DNA":"TATGCGATTACTCGTTAAGG"},
+        {"name":"Felis Catus", "DNA":"GGGTTTTGCGAACGGACTT"}
+    ]
+    </pre>
+    </div>
+    <script src="dna.js"></script>
+</body>
+</html>

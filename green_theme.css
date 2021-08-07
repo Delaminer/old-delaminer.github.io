@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&effect=anaglyph');
+body { background-color: rgb(215, 248, 244); }
+.jumbotron, .jumbot, .thumbnail { background-color: rgb(192, 228, 224); }
+.jumbotron > h1, .jumbo > h1 { font-family: 'Josefin Sans'; }
+abbr { font-family: 'Bangers', serif; }
+blockquote { background-color: rgb(192, 228, 224); border-left: 5px solid rgb(161, 192, 188); }
+/* a *:hover {
+  background-color: rgb(192, 228, 224);
+  border-radius: 10px;
+  padding-left: 10px;
+}
+a:hover {
+  background-color: rgb(192, 228, 224);
+  border-radius: 10px;
+  padding-left: 10px;
+} */
+.list { 
+    background-color: rgb(192, 228, 224);
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-right: 150px;
+}
+/* @mixin unselectable() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+body, p, h3, blockquote, nav, button, .class-structure, li { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+pre { -moz-tab-size: 4; tab-size: 4; }
+/* class-structure is for ClassCreator in Class Tools */
+.class-structure {
+    border-radius: 25px;
+    border: 3px solid rgb(176, 238, 176);
+    background-color: rgb(176, 238, 176);
+    /* margin-right: 10%; */
+    width: 500px;
+    font-size: large;
+    padding: 5px;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    color: white;
+}
+.btn-var {
+    width: 125px;
+    height: 35px;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    color: white;
+    word-spacing: normal;
+    margin-left: 40px;
+}
+.btn-class {
+    width: 105px;
+    height: 35px;
+    text-align: left;
+    padding: 0px 0px 0px 10px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    color: white;
+    word-spacing: normal;
+    margin-left: 40px;
+}
+.btn-save {
+    height: 35px;
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    color: white;
+    word-spacing: normal;
+    margin-left: 0px;
+}
+.blank {
+    background-color: rgba(255, 228, 196, 0);
+    border-color: rgba(255, 228, 196, 0);
+    color: rgba(255, 228, 196, 0);
+}
+
+/*
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding-top: 100px;
+    left: 10px;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+} */
+.modal-content {
+    display: none;
+    background-color: #ffffff; 
+    position: absolute;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px 10px 5px 10px;
+}
+
+.splitter * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .splitter-column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .splitter:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .splitter-column {
+      width: 100%;
+    }
+  }
+  .splitter-left {
+    width: 50%;
+  }
+  
+  .splitter-right {
+    width: 50%;
+  }
+
+.year {
+  background-color: rgb(192, 228, 224);
+  width: 100%;
+  font-size: large;
+  margin-left: -20px;
+  padding-left: 10px;
+  cursor: pointer;
+  /* @include unselectable(); */
+}
+table {
+  text-align: center;
+  width: 20px;
+  /* @include unselectable(); */
+}
+/* table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+} */
+.unselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+table > thead > tr > th {
+  text-align: center;
+}
+table.table-bordered{
+  border:1px solid black;
+  margin-top:20px;
+}
+table.table-bordered > thead > tr > th{
+    border:1px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid black;
+}
+table.table-bordered > tbody > tr > th{
+    border:1px solid black;
+}
+table.table-bordered > thead > tr > td{
+    border:1px solid black;
+}
+.flashcard {
+  background-color: white;
+  width: 200px;
+  height: 70px;
+  vertical-align: middle;
+  margin: 15px;
+  text-align: center;
+  padding: 0px;
+  border-style: solid;
+  background-color: white;
+  border-color: white;
+  border-width: 2px;
+  @include unselectable();
+}
+.flashcard:hover {
+  border-style: outset;
+}
+.filter-modal {
+  background-color: white;
+  width: 360px;
+  height: 200px;
+  display: none;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  padding: 10px;
+}
+
+.leftside, .rightside {
+  height: 50vh;
+  width: 100%;
+}
+@media screen and (min-width:768px) {
+  .leftside, .rightside {
+    height: 100vh;
+  }
+}
+.newitem {
+  /* padding: 100px; */
+  overflow: hidden;
+  /* margin: 10px; */
+  /* width: 10px; */
+}
+.clickable {
+  cursor: pointer;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+.topright {
+  position: absolute;
+  top: 58px;
+  right: 16px;
+  font-size: 18px;
+  color: black;
+}
+
+.subtitle {
+  text-align: center;
+}
