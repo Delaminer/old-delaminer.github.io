@@ -1,0 +1,52 @@
+
+<html><!--<style> html, body {background-color: yellow} </style>-->
+<head><link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16">
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../green_theme.css">
+</head>
+<body>
+    <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script>
+    <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">
+    <div class="jumbotron text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Conway's Game of Life</h1></div></a>
+    <div style="padding-left: 30px;">
+    <h3 id="helper">Press Play to start!</h1>
+    <canvas id="myCanvas" width="650" height="440"
+    style="border:1px solid #000000;">The canvas doesn't work in your browser!</canvas>
+    <br>
+    <button class="btn btn-default" onClick="toggle()">
+        <span id="Player" class="glyphicon glyphicon-play"></span> <span id="play">Play</span>
+     <!-- <img id="Player" src="Images/GameOfLife/rightArrow.gif" alt="Play/Pause" width="100%"> -->
+    </button>
+    <button class="btn btn-default" onClick="nextSlide()">
+        <span class="glyphicon glyphicon-step-forward"></span> Next Stage
+     <!-- <img src="Images/GameOfLife/nextSlide.gif" alt="Next" width="100%"> -->
+    </button>
+    <button class="btn btn-default" onClick="toggleEdit()">
+        <span class="glyphicon glyphicon-pencil"></span> Toggle Edit
+     <!-- <img src="Images/GameOfLife/pencil.gif" alt="Edit" width="100%"> -->
+    </button>
+    <button class="btn btn-default" onClick="printData()">
+        <span class="glyphicon glyphicon-floppy-disk"></span> Save
+     <!-- Save -->
+    </button>
+    <button class="btn btn-default" onClick="readData()">
+        <span class="glyphicon glyphicon-folder-open"></span> &nbsp; Read File
+    </button>
+    <button class="btn btn-default" onClick="clearData()">
+        <span class="glyphicon glyphicon-remove"></span> Clear
+    </button>
+    <button class="btn btn-default" onClick="randomData()">
+        <span class="glyphicon glyphicon-random"></span> &nbsp; Random
+    </button>
+    <p>
+        Output:
+    <p><p id="output" style="word-wrap: break-word;">Saved data will go here...
+    </p>
+    <script src="GameOfLife.js"></script></div>
+</body>
+</html>

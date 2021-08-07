@@ -1,0 +1,43 @@
+
+<html><!--<style> html, body {background-color: yellow} </style>-->
+<head><link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16">
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../green_theme.css">
+    <style>
+        .box {
+            /* font-family: 'Courier New', Courier, monospace; */
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            vertical-align:top;
+            font-weight: bold;
+            /* background-color: transparent; */
+            /* border-width: 0; */
+            /* border: 10px 10px 0px 0px; */
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script>
+    <div style="height: 50px;" class="jumbo text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Tic Tac Toe</h1></div>
+    <!-- <div class="jumbotron text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Tic Tac Toe</h1></div></a> -->
+    <div style="padding-left: 30px;">
+    <!-- <canvas id="myCanvas" width="650" height="440"
+    style="border:1px solid #000000;">The canvas doesn't work in your browser!</canvas> -->
+    <p id="status"></p>
+    <div id="options">
+        <button class="btn btn-success" id="play1">Play first</button>
+        <button class="btn btn-success" id="play2">Play second</button>
+    </div>
+    <br>
+    <div id="boxes"></div>
+    
+    <script src="tictactoe.js"></script></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html><!--<style> html, body {background-color: yellow} </style>-->
+<head>
+    <!-- <link rel="icon" href="../a_icon1.png" type="image/png" sizes="16x16"> -->
+    <title>Alex's Alcove</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script> -->
+    
+    <!-- <link rel="stylesheet" href="../green_theme.css"> -->
+    <style>
+        span {
+            width: 100%;
+            display: block;
+        }
+        table, th, td {
+            margin: 0px;
+            /* border-color: black;
+            border-width: 1px; */
+            border: black 1px solid;
+            min-width: 30px;
+            min-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="overflow-x: hidden">
+    <!-- <nav id="navbar"></nav><script src="../navbar.js"></script><script>run(files.PROJECTS, true)</script> -->
+    <div style="height: 50px;" class="jumbo text-center font-effect-anaglyph" id="title"><h1 style="text-shadow: 3px 3px 3px rgb(148, 175, 172);">Calculus</h1></div>
+    
+    <div class="things" >
+        <ul class="nav nav-tabs" style="padding-left: 40px;">
+          <li class="active"><a data-toggle="tab" href="#menu">Matrmenulues</a></li>
+          <li><a data-toggle="tab" href="#matrices">Matrices and Eigenvalues</a></li>
+        </ul>
+        
+        <div class="tab-content" style="padding-left: 40px;">
+            
+        <div id="menu" class="tab-pane fade in active">
+            <input type="text" id="in-eq" autofocus>
+            <script src="./Resources/diffeq.js"></script>
+            <!-- <script src="derivatives.js"></script> -->
+        </div>
+        <div id="matrices" class="tab-pane fade in">
+            <h5>Note: click on the cells in the matrix to edit them.</h5>
+        <br>
+        <p style="font-weight: bold;">x'(t) = A * x(t)<br>A = </p>
+        <table style="font-weight: bold;">
+        <tbody id="matrix table">
+                <tr>
+                    <td><span id="A1" contenteditable></span></td>
+                    <td><span id="B1" contenteditable></span></td>
+                    <td><span id="C1" contenteditable></span></td>
+                </tr>
+                <tr>
+                    <td><span id="A2" contenteditable></span></td>
+                    <td><span id="B2" contenteditable></span></td>
+                    <td><span id="C2" contenteditable></span></td>
+                </tr>
+                <tr>
+                    <td><span id="A3" contenteditable></span></td>
+                    <td><span id="B3" contenteditable></span></td>
+                    <td><span id="C3" contenteditable></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button onclick="Use2()">2x2</button>
+        <button onclick="Use3()">3x3</button>
+        <button onclick="solveMatrix()">Solve!</button>
+        <br>
+        <br>
+        <p id="eigenvalues">
+            Eigenvalues are _ and _
+        </p>
+        <p id="eigenvectors">
+            Eigenvectors are _ and _
+        </p>
+        <p id="eigenvalue-solution">
+            x(t) = 
+        </p>
+        <script src="Resources/matrices.js"></script>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
