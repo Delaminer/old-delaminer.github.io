@@ -38,6 +38,7 @@ function run(file, gotoRoot) {
               <li><a href="https://projects.alexanderdelaiglesia.com/Hangman/">Hangman</a></li>
               <li><a href="https://projects.alexanderdelaiglesia.com/Hangman-Multiplayer/">Hangman Multiplayer</a></li>
               <li><a href="https://graphvideo-1.delaminer.repl.co/">GraphVideo</a></li>
+              <li><a href="https://projects.alexanderdelaiglesia.com/Magic-the-Gathering-Simulator/magic.html">Magic the Gathering Simulator</a></li>
               <li role="separator" class="divider"></li>`
               // <li><a href="` + ((gotoRoot)? '../':'') + `physics.html">2D Physics</a></li>
               // <li><a href="` + ((gotoRoot)? '../':'') + `WebGL/webgame.html">Web Game</a></li>
